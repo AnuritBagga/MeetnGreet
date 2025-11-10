@@ -38,7 +38,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "http://localhost:5000",
+  "proxy": "https://your-backend-service-url.com",
   "devDependencies": {
     "gh-pages": "^6.3.0"
   }

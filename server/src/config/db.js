@@ -2,20 +2,14 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        const uri = process.env.MONGODB_URI;
-
-        if (!uri) {
-            throw new Error('❌ MONGODB_URI not found in .env file');
-        }
-
-        // Use proper TLS options — no deprecated sslValidate
-        await mongoose.connect(uri, {
+        console.log('🔗 Connecting to MongoDB...');
+        await mongoose.connect(process.env.MONGODB_URI, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            tls: true,
-            tlsAllowInvalidCertificates: false,
+            ssl: true,
+            tlsAllowInvalidCertificates: false, // ensure certificate validation
+            serverSelectionTimeoutMS: 5000, // timeout if server unreachable
         });
-
         console.log('✅ MongoDB connected successfully');
     } catch (error) {
         console.error('❌ MongoDB Connection Error:', error.message);

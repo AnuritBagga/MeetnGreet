@@ -54,17 +54,18 @@ Frontend
 React.js, Tailwind CSS
 
 Backend
-
 Node.js, Express.js
-
 Real-Time
-
 Socket.io (for Signaling), WebRTC (for P2P Media)
-
 AI
-
 Google Gemini API
-
 WebRTC Helper
 
 simple-peer
+
+
+
+Video link:-- https://go.screenpal.com/watch/cTXXINnFmLI
+
+
+

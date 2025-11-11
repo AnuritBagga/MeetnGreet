@@ -8,10 +8,16 @@ const activeConnections = new Map(); // Track active peer connections
 const initializeSocket = (server) => {
     io = new Server(server, {
         cors: {
-            origin: process.env.CLIENT_URL || 'http://localhost:3000',
+            origin: [
+                process.env.CLIENT_URL || 'http://localhost:3000',
+                'https://tum-aur-mai-3.onrender.com',        // backend (Render)
+                'https://anuritbagga.github.io'               // frontend (GitHub Pages)
+            ],
             methods: ['GET', 'POST']
         }
     });
+};
+
 
     io.on('connection', (socket) => {
         console.log(`✅ User connected: ${socket.id}`);

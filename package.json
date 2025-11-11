@@ -4,11 +4,11 @@
   "description": "WebRTC Video Conferencing Server",
   "main": "src/index.js",
   "scripts": {
-    "start": "NODE_OPTIONS=--openssl-legacy-provider node src/index.js",
-    "dev": "NODE_OPTIONS=--openssl-legacy-provider nodemon src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
   },
   "keywords": ["webrtc", "video-chat", "socket.io"],
-  "author": "Your Name",
+  "author": "Anurit Bagga",
   "license": "MIT",
   "dependencies": {
     "@google/generative-ai": "^0.1.3",
